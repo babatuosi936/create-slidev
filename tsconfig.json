@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "vite-ts-plugin"
+      }
+    ],
+    "types": ["node", "vite/client"],
+    "ignoreDeprecations": "6.0"
+  },
+  "include": [
+    "src/**/*",
+    "types/**/*.d.ts"  // ✅ 包含自定义类型声明
+  ]
+}
