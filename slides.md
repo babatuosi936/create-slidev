@@ -1531,41 +1531,6 @@ A[j] = A[j-1] + A[j], j = i-1,i-2,…2
 
 ---
 layout: right-sidebar
-transition: fade-out
-class: 'pr-4 text-xs leading-relaxed'
----
-
-# <div class="mt-1 text-lg opacity-80">4.3.2 倒推法</div>
-
-## 🔷 例2：杨辉三角形输出（用1维数组完成）
-
-<div v-click class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-3 mt-2 mb-3 text-xs border-l-6 border-orange-500">
-如何用一维数组实现杨辉三角形的输出？
-</div>
-
-### 🔧 算法设计思路
-<div v-click class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-3xl p-3 mt-2 mb-3 text-xs border-l-6 border-orange-600">
-<ul class="list-disc list-inside space-y-1 text-gray-700">
-  <li>一维数组A[1-i]存储第i行</li>
-  <li>正推法会覆盖上一行对应的值，无法求下一个值</li>
-  <li>反推法可以避免这个问题</li>
-</ul>
-</div>
-
-### 📐 数学模型
-<div v-click class="bg-gradient-to-br from-orange-200 to-orange-250 to-orange-200 rounded-3xl p-3 mt-2 mb-3 text-xs border-l-6 border-orange-700">
-<div class="text-center font-mono text-red-600 text-lg font-bold">
-A[j] = A[j-1] + A[j], j = i-1,i-2,…2
-</div>
-</div>
-
-<div v-click class="mt-2 text-xxs text-gray-600 italic bg-slate-100 p-2 rounded-3xl border border-slate-200">
-💡 核心思想：从后往前计算，避免数据覆盖问题
-</div>
-
-
----
-layout: right-sidebar
 class: 'text-xs'
 transition: fade-out
 ---
