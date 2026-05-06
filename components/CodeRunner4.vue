@@ -30,7 +30,7 @@ const props = withDefaults(
     height?: number
   }>(),
   {
-    height: 520
+    height: 450
   }
 )
 

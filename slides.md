@@ -233,17 +233,41 @@ transition: fade-out
 
 <div class="overflow-x-auto flex justify-center">
   <div class="min-w-[200px] grid grid-cols-3 gap-1">
-    <div class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center">
-      <div class="text-sky-300 text-xs font-semibold mb-0.5 text-center">算法1：经典迭代</div>
-      <div class="text-slate-300 text-xs mb-1 text-center">最常见的 a,b,c 迭代更新方式。</div>
+    <!-- 算法1 -->
+    <div
+      class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center cursor-pointer hover:bg-slate-800 transition"
+      @click="$slidev.nav.go(5)"
+    >
+      <div class="text-sky-300 text-xs font-semibold mb-0.5 text-center">
+        算法1：经典迭代
+      </div>
+      <div class="text-slate-300 text-xs mb-1 text-center">
+        最常见的 a,b,c 迭代更新方式。
+      </div>
     </div>
-    <div class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center">
-      <div class="text-emerald-300 text-xs font-semibold mb-0.5 text-center">算法2：数组构造</div>
-      <div class="text-slate-300 text-xs mb-1 text-center">适合可视化展示的数组方式。</div>
+    <!-- 算法2 -->
+    <div
+      class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center cursor-pointer hover:bg-slate-800 transition"
+      @click="$slidev.nav.go(6)"
+    >
+      <div class="text-emerald-300 text-xs font-semibold mb-0.5 text-center">
+        算法2：数组构造
+      </div>
+      <div class="text-slate-300 text-xs mb-1 text-center">
+        适合可视化展示的数组方式。
+      </div>
     </div>
-    <div class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center">
-      <div class="text-violet-300 text-xs font-semibold mb-0.5 text-center">算法3：解构赋值</div>
-      <div class="text-slate-300 text-xs mb-1 text-center">最简洁、最紧凑的写法。</div>
+    <!-- 算法3 -->
+    <div
+      class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center cursor-pointer hover:bg-slate-800 transition"
+      @click="$slidev.nav.go(7)"
+    >
+      <div class="text-violet-300 text-xs font-semibold mb-0.5 text-center">
+        算法3：解构赋值
+      </div>
+      <div class="text-slate-300 text-xs mb-1 text-center">
+        最简洁、最紧凑的写法。
+      </div>
     </div>
   </div>
 </div>
@@ -255,7 +279,7 @@ transition: fade-out
       @click="toggleCodeBox('fib1')" 
       class="px-2 py-0.5 bg-slate-700 text-slate-200 rounded-lg hover:bg-slate-600 transition-colors text-xs whitespace-nowrap"
     >
-      <span>📋 查看代码</span>
+      <span>📋 查看代码(C语言)</span>
       <span v-if="codeBoxes.fib1" class="text-green-400">▼</span>
       <span v-else class="text-blue-400">▶</span>
     </button>
@@ -277,7 +301,7 @@ transition: fade-out
 </div>
 
 
-<div v-if="showAnimation" key="fibonacci-animation" class="mt-2 transition-all duration-500">
+<div v-if="showAnimation" key="fibonacci-animation" class="mt-1 transition-all duration-500">
   <div class="bg-gray-800 p-3 rounded-lg border-2 border-blue-500">
     <h3 class="text-white font-semibold text-sm mb-2">
       📊 Fibonacci 动画演示（a + b = c）
@@ -323,18 +347,18 @@ transition: fade-out
         </div>
       </div>
     </div>
-    <div class="text-center text-gray-300 text-xs mt-2">
+    <div class="text-center text-gray-300 text-xs mt-1">
       Step {{step}} / {{totalSteps}}
     </div>
   </div>
 </div>
 
-<div v-if="codeBoxes.fib1" class="mt-4 p-4 bg-slate-900/90 rounded-xl border border-slate-600">
+<div v-if="codeBoxes.fib1" class="mt-1 p-4 bg-slate-900/90 rounded-xl border border-slate-600">
 <CodeRunner 
   :code="fib1Code"
   language="c"
-  :height="400"
-  :output-height="60"
+  :height="410"
+  :output-height="90"
 />
 </div>
 
@@ -474,20 +498,45 @@ transition: fade-out
 
 <div class="overflow-x-auto flex justify-center">
   <div class="min-w-[200px] grid grid-cols-3 gap-1">
-    <div class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center">
-      <div class="text-sky-300 text-xs font-semibold mb-0.5 text-center">算法1：经典迭代</div>
-      <div class="text-slate-300 text-xs mb-1 text-center">最常见的 a,b,c 迭代更新方式。</div>
+    <!-- 算法1 -->
+    <div
+      class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center cursor-pointer hover:bg-slate-800 transition"
+      @click="$slidev.nav.go(5)"
+    >
+      <div class="text-sky-300 text-xs font-semibold mb-0.5 text-center">
+        算法1：经典迭代
+      </div>
+      <div class="text-slate-300 text-xs mb-1 text-center">
+        最常见的 a,b,c 迭代更新方式。
+      </div>
     </div>
-    <div class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center">
-      <div class="text-emerald-300 text-xs font-semibold mb-0.5 text-center">算法2：数组构造</div>
-      <div class="text-slate-300 text-xs mb-1 text-center">适合可视化展示的数组方式。</div>
+    <!-- 算法2 -->
+    <div
+      class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center cursor-pointer hover:bg-slate-800 transition"
+      @click="$slidev.nav.go(6)"
+    >
+      <div class="text-emerald-300 text-xs font-semibold mb-0.5 text-center">
+        算法2：数组构造
+      </div>
+      <div class="text-slate-300 text-xs mb-1 text-center">
+        适合可视化展示的数组方式。
+      </div>
     </div>
-    <div class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center">
-      <div class="text-violet-300 text-xs font-semibold mb-0.5 text-center">算法3：解构赋值</div>
-      <div class="text-slate-300 text-xs mb-1 text-center">最简洁、最紧凑的写法。</div>
+    <!-- 算法3 -->
+    <div
+      class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center cursor-pointer hover:bg-slate-800 transition"
+      @click="$slidev.nav.go(7)"
+    >
+      <div class="text-violet-300 text-xs font-semibold mb-0.5 text-center">
+        算法3：解构赋值
+      </div>
+      <div class="text-slate-300 text-xs mb-1 text-center">
+        最简洁、最紧凑的写法。
+      </div>
     </div>
   </div>
 </div>
+
 
 <div class="flex items-center justify-between gap-2 mt-1">
   <div class="font-semibold text-base opacity-80 whitespace-nowrap">算法2：数组构造</div>
@@ -496,7 +545,7 @@ transition: fade-out
       @click="toggleCodeBox('fib1')" 
       class="px-2 py-0.5 bg-slate-700 text-slate-200 rounded-lg hover:bg-slate-600 transition-colors text-xs whitespace-nowrap"
     >
-      <span>📋 查看代码</span>
+      <span>📋 查看代码(C语言)</span>
       <span v-if="codeBoxes.fib1" class="text-green-400">▼</span>
       <span v-else class="text-blue-400">▶</span>
     </button>
@@ -517,7 +566,7 @@ transition: fade-out
   </div>
 </div>
 
-<div v-if="showAnimation2" key="fibonacci-animation-2" class="mt-2 transition-all duration-500">
+<div v-if="showAnimation2" key="fibonacci-animation-2" class="mt-1 transition-all duration-500">
   <div class="bg-gray-800 p-3 rounded-lg border-2 border-emerald-500">
     <h3 class="text-white font-semibold text-sm mb-2">
       📊 Fibonacci 动画演示（数组构造）
@@ -544,18 +593,18 @@ transition: fade-out
         </div>
       </div>
     </div>
-    <div class="text-center text-gray-300 text-xs mt-2">
+    <div class="text-center text-gray-300 text-xs mt-1">
       Step {{step2}} / {{totalSteps2}}
     </div>
   </div>
 </div>
 
-<div v-if="codeBoxes.fib1" class="mt-4 p-4 bg-slate-900/90 rounded-xl border border-slate-600">
+<div v-if="codeBoxes.fib1" class="mt-1 p-4 bg-slate-900/90 rounded-xl border border-slate-600">
 <CodeRunner 
   :code="fib2Code"
   language="c"
-  :height="400"
-  :output-height="60"
+  :height="410"
+  :output-height="90"
 />
 </div>
 
@@ -572,7 +621,6 @@ const showAnimation2 = ref(false)
 const seq = ref([1, 1])
 const step2 = ref(0)
 
-// ❗ 修复点：这里改成普通变量
 const totalSteps2 = 8
 
 const currentValues = ref({
@@ -581,7 +629,6 @@ const currentValues = ref({
   c: 0
 })
 
-// 步骤
 const steps2 = [
   { a: 1, b: 1, c: 2 },
   { a: 1, b: 2, c: 3 },
@@ -597,7 +644,7 @@ let animationInterval2 = null
 
 const startAnimation2 = () => {
   stopAnimation2()
-  
+
   showAnimation2.value = true
   step2.value = 0
   seq.value = [1, 1]
@@ -608,7 +655,7 @@ const startAnimation2 = () => {
   animationInterval2 = setInterval(() => {
     if (currentStep < steps2.length) {
       const s = steps2[currentStep]
-      
+
       currentValues.value.a = s.a
       currentValues.value.b = s.b
       currentValues.value.c = s.c
@@ -634,11 +681,18 @@ const stopAnimation2 = () => {
   currentValues.value = { a: 1, b: 1, c: 0 }
 }
 
+// ================== ⭐新增互斥函数 ==================
 const codeBoxes = ref({
-  fib1: false
+  fib2: false,
+  fib3: false
 })
 
 const toggleCodeBox = (key) => {
+  // ⭐互斥核心逻辑（和算法1一样）
+  if (showAnimation2.value) {
+    stopAnimation2()
+  }
+
   codeBoxes.value[key] = !codeBoxes.value[key]
 }
 
@@ -678,20 +732,45 @@ transition: fade-out
 
 <div class="overflow-x-auto flex justify-center">
   <div class="min-w-[200px] grid grid-cols-3 gap-1">
-    <div class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center">
-      <div class="text-sky-300 text-xs font-semibold mb-0.5 text-center">算法1：经典迭代</div>
-      <div class="text-slate-300 text-xs mb-1 text-center">最常见的 a,b,c 迭代更新方式。</div>
+    <!-- 算法1 -->
+    <div
+      class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center cursor-pointer hover:bg-slate-800 transition"
+      @click="$slidev.nav.go(5)"
+    >
+      <div class="text-sky-300 text-xs font-semibold mb-0.5 text-center">
+        算法1：经典迭代
+      </div>
+      <div class="text-slate-300 text-xs mb-1 text-center">
+        最常见的 a,b,c 迭代更新方式。
+      </div>
     </div>
-    <div class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center">
-      <div class="text-emerald-300 text-xs font-semibold mb-0.5 text-center">算法2：数组构造</div>
-      <div class="text-slate-300 text-xs mb-1 text-center">适合可视化展示的数组方式。</div>
+    <!-- 算法2 -->
+    <div
+      class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center cursor-pointer hover:bg-slate-800 transition"
+      @click="$slidev.nav.go(6)"
+    >
+      <div class="text-emerald-300 text-xs font-semibold mb-0.5 text-center">
+        算法2：数组构造
+      </div>
+      <div class="text-slate-300 text-xs mb-1 text-center">
+        适合可视化展示的数组方式。
+      </div>
     </div>
-    <div class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center">
-      <div class="text-violet-300 text-xs font-semibold mb-0.5 text-center">算法3：解构赋值</div>
-      <div class="text-slate-300 text-xs mb-1 text-center">最简洁、最紧凑的写法。</div>
+    <!-- 算法3 -->
+    <div
+      class="rounded-3xl bg-slate-950/90 p-2 flex flex-col items-center cursor-pointer hover:bg-slate-800 transition"
+      @click="$slidev.nav.go(7)"
+    >
+      <div class="text-violet-300 text-xs font-semibold mb-0.5 text-center">
+        算法3：解构赋值
+      </div>
+      <div class="text-slate-300 text-xs mb-1 text-center">
+        最简洁、最紧凑的写法。
+      </div>
     </div>
   </div>
 </div>
+
 
 <div class="flex items-center justify-between gap-2 mt-1">
   <div class="font-semibold text-base opacity-80 whitespace-nowrap">算法3：解构赋值</div>
@@ -700,7 +779,7 @@ transition: fade-out
       @click="toggleCodeBox('fib3')" 
       class="px-2 py-0.5 bg-slate-700 text-slate-200 rounded-lg hover:bg-slate-600 transition-colors text-xs whitespace-nowrap"
     >
-      <span>📋 查看代码(c语言)</span>
+      <span>📋 查看代码(C语言)</span>
       <span v-if="codeBoxes.fib3" class="text-green-400">▼</span>
       <span v-else class="text-blue-400">▶</span>
     </button>
@@ -722,7 +801,7 @@ transition: fade-out
 </div>
 
 <!-- ✅ 算法三动画演示 -->
-<div v-if="showAnimation3" key="fibonacci-animation-3" class="mt-2 transition-all duration-500">
+<div v-if="showAnimation3" key="fibonacci-animation-3" class="mt-1 transition-all duration-500">
   <div class="bg-gray-800 p-3 rounded-lg border-2 border-violet-500">
     <h3 class="text-white font-semibold text-sm mb-2">
       📊 Fibonacci 动画演示（解构赋值）
@@ -744,104 +823,82 @@ transition: fade-out
       </div>
     </div>
     <!-- 实时输出结果 - 每步更新的序列 -->
-    <div class="mt-2 text-xs text-green-400 font-mono bg-gray-900 p-2 rounded text-center">
+    <div class="mt-1 text-xs text-green-400 font-mono bg-gray-900 p-2 rounded text-center">
       输出序列: {{outputSequence3.join(' ')}}
     </div>
-    <div class="text-center text-gray-300 text-xs mt-2">
+    <div class="text-center text-gray-300 text-xs mt-1">
       Step {{step3}} / {{totalSteps3}}
     </div>
   </div>
 </div>
 
-<div v-if="codeBoxes.fib3" class="mt-4 p-4 bg-slate-900/90 rounded-xl border border-slate-600">
+<div v-if="codeBoxes.fib3" class="mt-1 p-4 bg-slate-900/90 rounded-xl border border-slate-600">
 <CodeRunner 
   :code="fib3Code"
   language="c"
-  :height="400"
-  :output-height="60"
+  :height="410"
+  :output-height="90"
 />
 </div>
 
 <script setup>
 import { ref } from 'vue'
 
-// 共享函数：计算进度条宽度
 const getBarWidth = (value) => {
-  const max = 55 // 最大斐波那契值
+  const max = 55
   return Math.min((value / max) * 100, 100) + '%'
 }
 
-// ✅ 算法3 相关状态
+// 状态
 const showAnimation3 = ref(false)
 const currentA3 = ref(1)
 const currentB3 = ref(1)
 const step3 = ref(0)
 const totalSteps3 = ref(8)
-const historyRecords3 = ref([]) // 记录每一步的计算过程
-const outputSequence3 = ref([1, 1]) // 记录输出序列，初始为 [1, 1]
 
-// 控制代码框显示状态
-const codeBoxes = ref({
-  fib1: false,
-  fib2: false,
-  fib3: false
-})
-
-// 切换代码框显示
-const toggleCodeBox = (key) => {
-  // 如果动画正在播放，先停止动画
-  if (showAnimation3.value) {
-    stopAnimation3()
-  }
-  
-  // 切换指定的代码框
-  codeBoxes.value[key] = !codeBoxes.value[key]
-}
-
-// 算法3 步骤数据
-const steps3 = [
-  { a: 1, b: 2, next: 2 },  // [1, 1] → [1, 2]
-  { a: 2, b: 3, next: 3 },  // [1, 2] → [2, 3]
-  { a: 3, b: 5, next: 5 },  // [2, 3] → [3, 5]
-  { a: 5, b: 8, next: 8 },  // [3, 5] → [5, 8]
-  { a: 8, b: 13, next: 13 }, // [5, 8] → [8, 13]
-  { a: 13, b: 21, next: 21 },// [8, 13] → [13, 21]
-  { a: 21, b: 34, next: 34 },// [13, 21] → [21, 34]
-  { a: 34, b: 55, next: 55 } // [21, 34] → [34, 55]
-]
+const historyRecords3 = ref([])
+const outputSequence3 = ref([1, 1])
 
 let animationInterval3 = null
 
-// 算法3 动画控制函数
+const steps3 = [
+  { a: 1, b: 2, next: 2 },
+  { a: 2, b: 3, next: 3 },
+  { a: 3, b: 5, next: 5 },
+  { a: 5, b: 8, next: 8 },
+  { a: 8, b: 13, next: 13 },
+  { a: 13, b: 21, next: 21 },
+  { a: 21, b: 34, next: 34 },
+  { a: 34, b: 55, next: 55 }
+]
+
 const startAnimation3 = () => {
   stopAnimation3()
-  
+
   showAnimation3.value = true
   step3.value = 0
   currentA3.value = 1
   currentB3.value = 1
-  historyRecords3.value = [] // 清空历史记录
-  outputSequence3.value = [1, 1] // 重置输出序列
-  
+  historyRecords3.value = []
+  outputSequence3.value = [1, 1]
+
   let currentStep = 0
+
   animationInterval3 = setInterval(() => {
     if (currentStep < steps3.length) {
       const s = steps3[currentStep]
-      
-      // 更新 a, b
+
       currentA3.value = s.a
       currentB3.value = s.b
-      
-      // 记录当前步骤
+
       historyRecords3.value.push(`Step ${currentStep + 1}: a=${s.a}, b=${s.b}`)
-      
-      // 更新输出序列 - 在每一步添加新的斐波那契数
+
       if (currentStep === 0) {
-        outputSequence3.value = [1, 1, s.b] // [1, 1, 2]
+        outputSequence3.value = [1, 1, s.b]
       } else {
-        outputSequence3.value.push(s.next) // 添加下一个斐波那契数
+        outputSequence3.value.push(s.next)
       }
-      
+
       step3.value = currentStep + 1
       currentStep++
     } else {
@@ -859,7 +916,23 @@ const stopAnimation3 = () => {
   step3.value = 0
   currentA3.value = 1
   currentB3.value = 1
-  outputSequence3.value = [1, 1] // 重置输出序列
+  outputSequence3.value = [1, 1]
+}
+
+// ================== ⭐新增互斥 ==================
+const codeBoxes = ref({
+  fib1: false,
+  fib2: false,
+  fib3: false
+})
+
+const toggleCodeBox = (key) => {
+  // ⭐关键：动画互斥（和算法1一致）
+  if (showAnimation3.value) {
+    stopAnimation3()
+  }
+
+  codeBoxes.value[key] = !codeBoxes.value[key]
 }
 
 // 算法3 代码
@@ -888,117 +961,12 @@ layout: right-sidebar
 class: 'text-xs'
 ---
 
-# <div class="text-lg text-blue-500">斐波那契三算法对比播放</div>
-
-<!-- ================= 状态 ================= -->
-<div class="mt-2 text-xs text-gray-300">
-Step {{step}} / {{maxStep}} ｜ 
-<span class="text-sky-300">算法1 O(1)</span> ｜ 
-<span class="text-emerald-300">算法2 O(n)</span> ｜ 
-<span class="text-violet-300">算法3 变形</span>
-</div>
-
-<!-- ================= 三算法展示 ================= -->
-<div class="grid grid-cols-3 gap-2 mt-3 text-xs">
-
-  <div class="p-2 bg-slate-900 rounded text-white">
-    <div class="text-sky-300 font-bold">算法1：标准迭代</div>
-    <div class="mt-2 font-mono">
-      a={{a1}}, b={{b1}}, c={{c1}}
-    </div>
-  </div>
-
-  <div class="p-2 bg-slate-900 rounded text-white">
-    <div class="text-emerald-300 font-bold">算法2：数组构造</div>
-    <div class="mt-2 font-mono">
-      {{seq2.join(' ')}}
-    </div>
-  </div>
-
-  <div class="p-2 bg-slate-900 rounded text-white">
-    <div class="text-violet-300 font-bold">算法3：变形累加</div>
-    <div class="mt-2 font-mono">
-      a={{a3}}, b={{b3}}
-    </div>
-  </div>
-
-</div>
-
-<!-- ================= 进度条 ================= -->
-<input
-  type="range"
-  min="0"
-  :max="maxStep"
-  v-model="step"
-  class="w-full mt-3"
-/>
-
-<!-- ================= 控制按钮 ================= -->
-<div class="flex flex-wrap gap-2 mt-3">
-
-  <button @click="play" class="px-3 py-1 bg-green-500 text-white rounded">
-    ▶ 播放
-  </button>
-
-  <button @click="pause" class="px-3 py-1 bg-yellow-500 text-white rounded">
-    ⏸ 暂停
-  </button>
-
-  <button @click="stepBack" class="px-3 py-1 bg-purple-500 text-white rounded">
-    ⏮ 回退
-  </button>
-
-  <button @click="stepForward" class="px-3 py-1 bg-blue-500 text-white rounded">
-    ⏭ 单步
-  </button>
-
-  <button @click="reset" class="px-3 py-1 bg-red-500 text-white rounded">
-    🔁 重置
-  </button>
-
-</div>
-
-<div class="overflow-x-auto mt-4">
-  <table class="w-full text-center table-fixed border-collapse">
-    <colgroup>
-      <col style="width: 20%;">
-      <col style="width: 25%;">
-      <col style="width: 20%;">
-      <col style="width: 35%;">
-    </colgroup>
-    <thead>
-      <tr class="bg-slate-800 text-white">
-        <th class="p-2 font-semibold">名称</th>
-        <th class="p-2 font-semibold">类型</th>
-        <th class="p-2 font-semibold">空间复杂度</th>
-        <th class="p-2 font-semibold">特点</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="border-t border-slate-700 hover:bg-slate-700/50 transition-colors">
-        <td class="p-2 font-mono text-sky-300">算法1</td>
-        <td class="p-2">标准迭代</td>
-        <td class="p-2">O(1)</td>
-        <td class="p-2 text-sm text-gray-300">不保存历史，仅滑动变量</td>
-      </tr>
-      <tr class="border-t border-slate-700 hover:bg-slate-700/50 transition-colors">
-        <td class="p-2 font-mono text-emerald-300">算法2 ⭐</td>
-        <td class="p-2">数组构造（标准）</td>
-        <td class="p-2">O(n)</td>
-        <td class="p-2 text-sm text-gray-300">完整保存序列（推荐）</td>
-      </tr>
-      <tr class="border-t border-slate-700 hover:bg-slate-700/50 transition-colors">
-        <td class="p-2 font-mono text-violet-300">算法3</td>
-        <td class="p-2">变形递推</td>
-        <td class="p-2">O(1)</td>
-        <td class="p-2 text-sm text-gray-300">非标准 Fibonacci，仅演示</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
 <script setup>
 import { ref } from 'vue'
+import { useNav } from '@slidev/client'
+
+const nav = useNav()
+const go = (page) => nav.go(page)
 
 // ================= 状态 =================
 const step = ref(0)
@@ -1047,7 +1015,6 @@ const nextStep = () => {
   b3.value = a3.value + b3.value
 
   step.value++
-  tip.value = tips[step.value] || ''
 }
 
 // ================= 播放 =================
@@ -1097,11 +1064,137 @@ const reset = () => {
 
   a3.value = 1
   b3.value = 1
-
-  tip.value = '已重置'
 }
 </script>
 
+<!-- ================= 标题 ================= -->
+# <div class="text-lg text-blue-500">斐波那契三算法对比播放</div>
+
+<!-- ================= 状态 ================= -->
+<div class="mt-2 text-xs text-gray-300">
+Step {{step}} / {{maxStep}} ｜ 
+<span class="text-sky-300">算法1 O(1)</span> ｜ 
+<span class="text-emerald-300">算法2 O(n)</span> ｜ 
+<span class="text-violet-300">算法3 变形</span>
+</div>
+
+<!-- ================= 三算法展示 ================= -->
+<div class="grid grid-cols-3 gap-2 mt-3 text-xs">
+
+  <div
+    class="p-2 bg-slate-900 rounded text-white cursor-pointer"
+    @click="go(5)"
+  >
+    <div class="text-sky-300 font-bold">算法1：标准迭代</div>
+    <div class="mt-2 font-mono">
+      a={{a1}}, b={{b1}}, c={{c1}}
+    </div>
+  </div>
+
+  <div
+    class="p-2 bg-slate-900 rounded text-white cursor-pointer"
+    @click="go(6)"
+  >
+    <div class="text-emerald-300 font-bold">算法2：数组构造</div>
+    <div class="mt-2 font-mono">
+      {{seq2.join(' ')}}
+    </div>
+  </div>
+
+  <div
+    class="p-2 bg-slate-900 rounded text-white cursor-pointer"
+    @click="go(7)"
+  >
+    <div class="text-violet-300 font-bold">算法3：变形累加</div>
+    <div class="mt-2 font-mono">
+      a={{a3}}, b={{b3}}
+    </div>
+  </div>
+
+</div>
+
+<!-- ================= 进度条 ================= -->
+<input
+  type="range"
+  min="0"
+  :max="maxStep"
+  v-model="step"
+  class="w-full mt-3"
+/>
+
+<!-- ================= 控制按钮 ================= -->
+<div class="flex flex-wrap gap-2 mt-3">
+
+  <button @click="play" class="px-3 py-1 bg-green-500 text-white rounded">
+    ▶ 播放
+  </button>
+
+  <button @click="pause" class="px-3 py-1 bg-yellow-500 text-white rounded">
+    ⏸ 暂停
+  </button>
+
+  <button @click="stepForward" class="px-3 py-1 bg-blue-500 text-white rounded">
+    ⏭ 单步
+  </button>
+
+  <button @click="stepBack" class="px-3 py-1 bg-purple-500 text-white rounded">
+    ⏮ 回退
+  </button>
+
+  <button @click="reset" class="px-3 py-1 bg-red-500 text-white rounded">
+    🔁 重置
+  </button>
+
+</div>
+
+<!-- ================= 表格 ================= -->
+<div class="overflow-x-auto mt-4">
+  <table class="w-full text-center table-fixed border-collapse">
+    <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 25%;">
+      <col style="width: 20%;">
+      <col style="width: 35%;">
+    </colgroup>
+    <thead>
+      <tr class="bg-slate-800 text-white">
+        <th class="p-2 font-semibold">名称</th>
+        <th class="p-2 font-semibold">类型</th>
+        <th class="p-2 font-semibold">空间复杂度</th>
+        <th class="p-2 font-semibold">特点</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="border-t border-slate-700 hover:bg-slate-700/50 cursor-pointer"
+        @click="go(5)"
+      >
+        <td class="p-2 font-mono text-sky-300">算法1</td>
+        <td class="p-2">标准迭代</td>
+        <td class="p-2">O(1)</td>
+        <td class="p-2 text-sm text-gray-300">不保存历史，仅滑动变量</td>
+      </tr>
+      <tr
+        class="border-t border-slate-700 hover:bg-slate-700/50 cursor-pointer"
+        @click="go(6)"
+      >
+        <td class="p-2 font-mono text-emerald-300">算法2 ⭐</td>
+        <td class="p-2">数组构造</td>
+        <td class="p-2">O(n)</td>
+        <td class="p-2 text-sm text-gray-300">完整保存序列</td>
+      </tr>
+      <tr
+        class="border-t border-slate-700 hover:bg-slate-700/50 cursor-pointer"
+        @click="go(7)"
+      >
+        <td class="p-2 font-mono text-violet-300">算法3</td>
+        <td class="p-2">变形递推</td>
+        <td class="p-2">O(1)</td>
+        <td class="p-2 text-sm text-gray-300">非标准 Fibonacci</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <!-- ✨ 4.2.2递推法 -->
 <!-- ✨ 4.2.2递推法 -->
@@ -1438,12 +1531,46 @@ A[j] = A[j-1] + A[j], j = i-1,i-2,…2
 
 ---
 layout: right-sidebar
+transition: fade-out
+class: 'pr-4 text-xs leading-relaxed'
+---
+
+# <div class="mt-1 text-lg opacity-80">4.3.2 倒推法</div>
+
+## 🔷 例2：杨辉三角形输出（用1维数组完成）
+
+<div v-click class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-3 mt-2 mb-3 text-xs border-l-6 border-orange-500">
+如何用一维数组实现杨辉三角形的输出？
+</div>
+
+### 🔧 算法设计思路
+<div v-click class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-3xl p-3 mt-2 mb-3 text-xs border-l-6 border-orange-600">
+<ul class="list-disc list-inside space-y-1 text-gray-700">
+  <li>一维数组A[1-i]存储第i行</li>
+  <li>正推法会覆盖上一行对应的值，无法求下一个值</li>
+  <li>反推法可以避免这个问题</li>
+</ul>
+</div>
+
+### 📐 数学模型
+<div v-click class="bg-gradient-to-br from-orange-200 to-orange-250 to-orange-200 rounded-3xl p-3 mt-2 mb-3 text-xs border-l-6 border-orange-700">
+<div class="text-center font-mono text-red-600 text-lg font-bold">
+A[j] = A[j-1] + A[j], j = i-1,i-2,…2
+</div>
+</div>
+
+<div v-click class="mt-2 text-xxs text-gray-600 italic bg-slate-100 p-2 rounded-3xl border border-slate-200">
+💡 核心思想：从后往前计算，避免数据覆盖问题
+</div>
+
+
+---
+layout: right-sidebar
 class: 'text-xs'
 transition: fade-out
 ---
-
+<!-- ================= 杨辉三角动画演示 ================= -->
 <div class="flex items-center justify-between gap-2 mt-1">
-
   <div class="font-semibold text-base opacity-80 whitespace-nowrap">
     杨辉三角（递推生成）
   </div>
@@ -1463,7 +1590,7 @@ transition: fade-out
     <span v-if="show.c">▼</span>
     <span v-else>▶</span>
   </button>
-  <!--<button
+  <button
     v-if="!show.anim"
     @click="show.anim = true"
     class="px-2 py-0.5 bg-blue-500 text-white rounded-lg hover:bg-blue-600 text-xs"
@@ -1476,10 +1603,10 @@ transition: fade-out
     class="px-2 py-0.5 bg-red-500 text-white rounded-lg hover:bg-red-600 text-xs"
   >
     ⏹️ 停止演示
-  </button>-->
-
+  </button>
 </div>
 
+<!-- ================= 代码区 ================= -->
 <div v-if="show.js" class="mt-3">
   <CodeRunner4 :code="jsCode" />
 </div>
@@ -1488,8 +1615,45 @@ transition: fade-out
   <CodeRunner4 :code="cCode" />
 </div>
 
+<!-- ================= 动画区 ================= -->
 <div v-if="show.anim" class="mt-3 p-4 bg-gray-800 text-white rounded-xl">
   📊 动画演示：递推生成杨辉三角
+</div>
+
+<div v-if="show.anim" class="mt-3 p-3 bg-slate-800 text-white rounded-lg">
+  <div class="flex items-center gap-2 mb-3">
+    <button
+      @click="nextStep"
+      class="px-2 py-0.5 bg-green-600 text-white rounded-lg text-xs">
+      ▶ 下一步
+    </button>
+    <span class="text-xs opacity-70">
+      第 {{ step }} 步
+    </span>
+  </div>
+
+  <!-- 显示当前行 -->
+  <div class="text-xs space-y-1 mb-4">
+    <div>🎯 当前行: {{ currentRow.join(' ') }}</div>
+    <div>💡 计算规则: a[j] = a[j] + a[j-1]</div>
+  </div>
+
+  <!-- 三角形展示区 -->
+  <div class="w-full h-64 bg-gray-900 rounded-lg overflow-hidden border border-gray-700 flex items-center justify-center">
+    <div class="text-center space-y-2">
+      <!-- 每一行单独渲染，并居中 -->
+      <div v-for="(row, i) in triangle" :key="i" 
+           class="flex justify-center gap-1 mb-1">
+        <div v-for="(num, j) in row" 
+             :class="[
+               'w-8 h-8 flex items-center justify-center text-sm font-mono',
+               i === step - 1 ? 'bg-yellow-400 text-black' : 'bg-gray-700 text-gray-300'
+             ]">
+          {{ num }}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script setup>
@@ -1501,7 +1665,30 @@ const show = ref({
   anim: false
 })
 
-/* JS版本（修复后的正确实现） */
+const triangle = ref([[1]]) // 存储所有行的数据
+const currentRow = ref([1]) // 当前行数据
+const step = ref(0)
+
+function nextStep() {
+  if (step.value >= 5) return // 最多显示5行（总共6行：0-5）
+
+  // 获取上一行数据
+  const prevRow = triangle.value[step.value]
+  const newRow = [1] // 新行首元素为1
+
+  // 根据杨辉三角规律计算中间元素
+  for (let j = 1; j < prevRow.length; j++) {
+    newRow.push(prevRow[j-1] + prevRow[j])
+  }
+  newRow.push(1) // 新行尾元素为1
+
+  // 更新数据
+  triangle.value.push(newRow)
+  currentRow.value = newRow
+  step.value++
+}
+
+// JS版本代码
 const jsCode = `
 let n = 5;
 let a = new Array(100).fill(0);
@@ -1514,7 +1701,7 @@ console.log(a[1], a[2]);
 for (let i = 3; i <= n; i++) {
   a[i] = 1;
 
-  // 杨辉三角核心递推逻辑
+  // 杨辉三角核心递推逻辑（从后往前，避免数据覆盖）
   for (let j = i - 1; j > 1; j--) {
     a[j] = a[j] + a[j - 1];
   }
@@ -1527,7 +1714,7 @@ for (let i = 3; i <= n; i++) {
 }
 `
 
-/* C版本（正确实现杨辉三角） */
+// C版本代码
 const cCode = `#include <stdio.h>
 
 int main() {
@@ -1538,9 +1725,9 @@ int main() {
     printf("1\\n");
 
     for (int i = 2; i <= n; i++) {
-        a[i] = 1; // 每一行的最后一个数设为1（修复了老师的 a[i]==1 错误）
+        a[i] = 1; // 每一行的最后一个数设为1
 
-        // 核心：从后往前更新
+        // 核心：从后往前更新（避免数据覆盖）
         for (int j = i - 1; j > 1; j--) {
             a[j] = a[j] + a[j - 1];
         }
@@ -1553,7 +1740,6 @@ int main() {
     }
     return 0;
 }`
-
 </script>
 
 
@@ -1994,6 +2180,7 @@ x = x0 - f(x0) / ▽f(x0)
 
 
 
+
 ---
 layout: right-sidebar
 class: 'text-xs'
@@ -2001,7 +2188,6 @@ transition: fade-out
 ---
 
 <div class="flex items-center justify-between gap-2 mt-1">
-
   <div class="font-semibold text-base opacity-80 whitespace-nowrap">
     牛顿迭代法解方程
   </div>
@@ -2021,7 +2207,7 @@ transition: fade-out
     <span v-if="show.c">▼</span>
     <span v-else>▶</span>
   </button>
-  <!--<button
+  <button
     v-if="!show.anim"
     @click="show.anim = true"
     class="px-2 py-0.5 bg-blue-500 text-white rounded-lg hover:bg-blue-600 text-xs"
@@ -2034,9 +2220,10 @@ transition: fade-out
     class="px-2 py-0.5 bg-red-500 text-white rounded-lg hover:bg-red-600 text-xs"
   >
     ⏹️ 停止演示
-  </button>-->
+  </button>
 </div>
 
+<!-- ================= 代码区 ================= -->
 <div v-if="show.js" class="mt-3">
   <CodeRunner7 :code="jsCode" />
 </div>
@@ -2045,12 +2232,41 @@ transition: fade-out
   <CodeRunner7 :code="cCode" />
 </div>
 
+<!-- ================= 动画区 ================= -->
 <div v-if="show.anim" class="mt-3 p-4 bg-gray-800 text-white rounded-xl">
   📊 动画演示：牛顿迭代法逼近方程根
 </div>
 
+<div v-if="show.anim" class="mt-3 p-3 bg-slate-800 text-white rounded-lg">
+  <div class="flex items-center gap-2 mb-3">
+    <button
+      @click="nextStep"
+      class="px-2 py-0.5 bg-green-600 text-white rounded-lg text-xs">
+      ▶ 下一步
+    </button>
+    <span class="text-xs opacity-70">
+      第 {{ step }} 步
+    </span>
+  </div>
+  <div class="text-xs space-y-1">
+    <div>📍 x<sub>{{ step.value }}</sub> = {{ xCurrent.toFixed(6) }}</div>
+    <div>📍 f(x<sub>{{ step.value }}</sub>) = {{ f(xCurrent).toFixed(6) }}</div>
+    <div class="mt-1 pt-1 border-t border-slate-600">
+      📍 f'(x<sub>{{ step.value }}</sub>) = {{ df(xCurrent).toFixed(6) }}
+    </div>
+    <div>
+      📍 x<sub>{{ step.value + 1 }}</sub> = x<sub>{{ step.value }}</sub> - f(x<sub>{{ step.value }}</sub>)/f'(x<sub>{{ step.value }}</sub>) = {{ nextX.toFixed(6) }}
+    </div>
+  </div>
+  
+  <!-- 示例：调整 canvas 大小 -->
+  <div class="mt-4 w-full h-64 bg-gray-900 rounded-lg overflow-hidden border border-gray-700">
+    <canvas ref="chartCanvas" class="w-full h-full"></canvas>
+  </div>
+</div>
+
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const show = ref({
   js: false,
@@ -2058,8 +2274,235 @@ const show = ref({
   anim: false
 })
 
-const jsCode = `
-// 牛顿迭代法求解方程 f(x) = x^3 + 2x^2 + 3x + 4 = 0
+const step = ref(0)
+const xCurrent = ref(-1.0)  // 初始猜测值
+const nextX = ref(0)
+
+/* ================= 数学函数及导数 ================= */
+function f(x) {
+  return Math.pow(x, 3) + 2*Math.pow(x, 2) + 3*x + 4
+}
+
+function df(x) {
+  return 3*Math.pow(x, 2) + 4*x + 3
+}
+
+/* ================= 下一步 ================= */
+function nextStep() {
+  const fx = f(xCurrent.value)
+  const dfx = df(xCurrent.value)
+  
+  if (Math.abs(dfx) < 1e-10) {
+    console.log("❌ 导数接近零，无法继续迭代")
+    return
+  }
+  
+  nextX.value = xCurrent.value - fx / dfx
+  
+  xCurrent.value = nextX.value
+  step.value++
+
+  // ✅ 每次点击后重新绘制图表
+  drawChart()
+}
+
+const chartCanvas = ref(null)
+
+// 绘图函数
+function drawChart() {
+  const canvas = chartCanvas.value
+  if (!canvas) return
+
+  const ctx = canvas.getContext('2d')
+  const width = canvas.width
+  const height = canvas.height
+
+  // 清空画布
+  ctx.clearRect(0, 0, width, height)
+
+  // 修改 xMin, xMax, yMin, yMax 的范围
+  const xMin = -4, xMax = 4;
+  const yMin = -5, yMax = 7;
+
+  // 缩放因子
+  const scaleX = width / (xMax - xMin)
+  const scaleY = height / (yMax - yMin)
+
+  // 绘制坐标轴
+  ctx.beginPath()
+  ctx.strokeStyle = '#ffffff'
+  ctx.lineWidth = 1
+  
+  // X轴
+  const xAxisY = height - ((0 - yMin) / (yMax - yMin)) * height
+  ctx.moveTo(0, xAxisY)
+  ctx.lineTo(width, xAxisY)
+  
+  // Y轴
+  const yAxisX = (0 - xMin) * scaleX
+  ctx.moveTo(yAxisX, 0)
+  ctx.lineTo(yAxisX, height)
+  
+  ctx.stroke()
+  
+  // 绘制刻度标记
+  ctx.fillStyle = '#ffffff'
+  ctx.font = '10px Arial'
+  
+  // X轴刻度
+  for (let x = xMin; x <= xMax; x += 0.5) {
+    const px = (x - xMin) * scaleX
+    ctx.beginPath()
+    ctx.moveTo(px, xAxisY - 5)
+    ctx.lineTo(px, xAxisY + 5)
+    ctx.stroke()
+    
+    ctx.fillText(x.toFixed(1), px - 10, xAxisY + 15)
+  }
+  
+  // Y轴刻度
+  for (let y = yMin; y <= yMax; y += 1) {
+    const py = height - ((y - yMin) / (yMax - yMin)) * height
+    ctx.beginPath()
+    ctx.moveTo(yAxisX - 5, py)
+    ctx.lineTo(yAxisX + 5, py)
+    ctx.stroke()
+    
+    ctx.fillText(y.toFixed(0), yAxisX - 25, py + 4)
+  }
+  
+  // 绘制函数曲线 f(x) = x³+2x²+3x+4
+  ctx.beginPath()
+  ctx.strokeStyle = '#60a5fa'
+  ctx.lineWidth = 2
+  for (let x = xMin; x <= xMax; x += 0.01) {
+    const y = f(x)
+    const px = (x - xMin) * scaleX
+    const py = height - ((y - yMin) / (yMax - yMin)) * height
+    if (x === xMin && y >= yMin && y <= yMax) ctx.moveTo(px, py)
+    else if (y >= yMin && y <= yMax) ctx.lineTo(px, py)
+  }
+  ctx.stroke()
+
+  // 绘制当前迭代点
+  const currentXPos = (xCurrent.value - xMin) * scaleX
+  const currentYPos = height - ((f(xCurrent.value) - yMin) / (yMax - yMin)) * height
+  const tangentSlope = df(xCurrent.value)
+  
+  // 绘制当前点
+  ctx.beginPath()
+  ctx.fillStyle = '#10b981'
+  ctx.arc(currentXPos, currentYPos, 5, 0, Math.PI * 2)
+  ctx.fill()
+  
+  // 绘制切线
+  ctx.beginPath()
+  ctx.strokeStyle = '#f59e0b'
+  ctx.lineWidth = 1.5
+  
+  // 计算切线上的两点
+  const leftX = 0
+  const leftY = currentYPos - tangentSlope * (currentXPos - leftX) / scaleX * scaleY
+  const rightX = width
+  const rightY = currentYPos - tangentSlope * (currentXPos - rightX) / scaleX * scaleY
+  
+  ctx.moveTo(leftX, leftY)
+  ctx.lineTo(rightX, rightY)
+  ctx.stroke()
+  
+  // 绘制切线与x轴的交点（下一个迭代点）
+  if(step.value > 0) {
+    const nextXPos = (nextX.value - xMin) * scaleX
+    const nextYPos = height - ((0 - yMin) / (yMax - yMin)) * height  // y=0的位置
+    
+    ctx.beginPath()
+    ctx.fillStyle = '#ef4444'
+    ctx.arc(nextXPos, nextYPos, 5, 0, Math.PI * 2)
+    ctx.fill()
+    
+    // 连接当前点到下一个点的垂直线
+    ctx.beginPath()
+    ctx.strokeStyle = '#ef4444'
+    ctx.lineWidth = 1
+    ctx.setLineDash([3, 2])
+    ctx.moveTo(nextXPos, currentYPos)
+    ctx.lineTo(nextXPos, nextYPos)
+    ctx.stroke()
+    ctx.setLineDash([])
+  }
+  
+  
+  // 标注零点线
+  ctx.beginPath()
+  ctx.strokeStyle = '#9ca3af'
+  ctx.setLineDash([5, 3])
+  ctx.moveTo(0, xAxisY)
+  ctx.lineTo(width, xAxisY)
+  ctx.stroke()
+  ctx.setLineDash([])
+
+  // 设置字体和颜色
+ctx.fillStyle = 'white';
+ctx.font = '12px Arial';
+
+// 文本位置（固定在左上角）
+const textX = 10;
+const textY1 = 20;
+const textY2 = 40;
+
+// 绘制 f(x) 文本
+ctx.fillText(`f(x) = ${fx.toFixed(6)}`, textX, textY1);
+
+// 绘制 xNext 文本
+ctx.fillText(`xNaN = ${xNext.toFixed(6)}`, textX, textY2);
+
+// 🔹 添加从文本到对应点的引导线（使用不同颜色）
+
+// ① 从 f(x) 文本 → 函数曲线上点 (x, f(x))
+const px = (x - xMin) * scaleX;
+const py = height - ((fx - yMin) / (yMax - yMin)) * height;
+
+// 使用蓝色线连接 f(x) 文本到曲线上的点
+ctx.beginPath();
+ctx.moveTo(textX + 80, textY1 + 5); // 从文本右侧开始
+ctx.lineTo(px, py);
+ctx.strokeStyle = '#60a5fa'; // 蓝色
+ctx.lineWidth = 1;
+ctx.setLineDash([3, 2]); // 虚线
+ctx.stroke();
+ctx.setLineDash([]);
+
+// ② 从 xNext 文本 → 新的 x 点 (xNext, 0) 或 (xNext, f(xNext))
+const pxNext = (xNext - xMin) * scaleX;
+const pyNext = height - ((f(xNext) - yMin) / (yMax - yMin)) * height;
+
+// 使用橙色线连接 xNext 文本到新点
+ctx.beginPath();
+ctx.moveTo(textX + 80, textY2 + 5);
+ctx.lineTo(pxNext, pyNext);
+ctx.strokeStyle = '#f59e0b'; // 橙色
+ctx.lineWidth = 1;
+ctx.setLineDash([3, 2]);
+ctx.stroke();
+ctx.setLineDash([]);
+ctx.beginPath();
+ctx.arc(px, py, 3, 0, Math.PI * 2);
+ctx.fillStyle = '#60a5fa';
+ctx.fill();
+}
+
+onMounted(() => {
+  // 设置 canvas 尺寸
+  const canvas = chartCanvas.value
+  if (canvas) {
+    canvas.width = canvas.offsetWidth
+    canvas.height = canvas.offsetHeight
+    drawChart()
+  }
+})
+
+/* JS版本 */
+const jsCode = `// 牛顿迭代法求解方程 f(x) = x^3 + 2x^2 + 3x + 4 = 0
 function newtonMethod() {
   let x0 = -1.0;
   const tolerance = 1e-6;
@@ -2113,7 +2556,7 @@ int main() {
     int maxIterations = 100;
 
     printf("迭代过程：\\n");
-    printf("k\t x_k\t f(x_k)\t f'(x_k)\t x_{k+1}\\n");
+    printf("k\\t x_k\\t f(x_k)\\t f'(x_k)\\t x_{k+1}\\n");
 
     for (int k = 0; k < maxIterations; k++) {
         double fx = f(x0);
@@ -2126,7 +2569,7 @@ int main() {
 
         double x1 = x0 - fx / dfx;
 
-        printf("%d\t %.6f\t %.6f\t %.6f\t %.6f\\n", k, x0, fx, dfx, x1);
+        printf("%d\\t %.6f\\t %.6f\\t %.6f\\t %.6f\\n", k, x0, fx, dfx, x1);
 
         if (fabs(x1 - x0) < tolerance) {
             printf("\\n✅ 收敛！最终结果：\\n");
@@ -2190,6 +2633,8 @@ c = (a+b)/2<br>
 
 
 
+
+<!-- 二分法求方程根 -->
 ---
 layout: right-sidebar
 class: 'text-xs'
@@ -2197,7 +2642,6 @@ transition: fade-out
 ---
 
 <div class="flex items-center justify-between gap-2 mt-1">
-
   <div class="font-semibold text-base opacity-80 whitespace-nowrap">
     二分法求方程根
   </div>
@@ -2217,7 +2661,7 @@ transition: fade-out
     <span v-if="show.c">▼</span>
     <span v-else>▶</span>
   </button>
-  <!--<button
+  <button
     v-if="!show.anim"
     @click="show.anim = true"
     class="px-2 py-0.5 bg-blue-500 text-white rounded-lg hover:bg-blue-600 text-xs"
@@ -2230,111 +2674,272 @@ transition: fade-out
     class="px-2 py-0.5 bg-red-500 text-white rounded-lg hover:bg-red-600 text-xs"
   >
     ⏹️ 停止演示
-  </button>-->
+  </button>
 
 </div>
 
+<!-- ================= 代码区 ================= -->
 <div v-if="show.js" class="mt-3">
   <CodeRunner8 :code="jsCode" />
 </div>
-
 <div v-if="show.c" class="mt-3">
   <CodeRunner8 :code="cCode" />
 </div>
-<!--
+
+<!-- ================= 动画区 ================= -->
 <div v-if="show.anim" class="mt-3 p-4 bg-gray-800 text-white rounded-xl">
-  📊 动画演示：二分法求解方程 $ x^3/2 + 2x^2 - 8 = 0 $
-</div>-->
+  📊 动画演示：二分法求解方程
+</div>
+
+<div v-if="show.anim" class="mt-3 p-3 bg-slate-800 text-white rounded-lg">
+  <div class="flex items-center gap-2 mb-3">
+    <button
+      @click="nextStep"
+      class="px-2 py-0.5 bg-green-600 text-white rounded-lg text-xs">
+      ▶ 下一步
+    </button>
+    <span class="text-xs opacity-70">
+      第 {{ step }} 步
+    </span>
+  </div>
+  <div class="text-xs space-y-1">
+    <div>📌 a = {{ a.toFixed(6) }}</div>
+    <div>📌 b = {{ b.toFixed(6) }}</div>
+    <div class="mt-1 pt-1 border-t border-slate-600">
+      🎯 c = {{ c.toFixed(6) }}
+    </div>
+    <div>
+      f(c) = {{ f(c).toFixed(6) }}
+    </div>
+  </div>
+  
+  <!-- 新增：图表容器 -->
+  <div class="mt-4 w-full h-48 bg-gray-900 rounded-lg overflow-hidden border border-gray-700">
+    <canvas ref="chartCanvas" class="w-full h-full"></canvas>
+  </div>
+</div>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
+// 添加缺失的 show 状态
 const show = ref({
   js: false,
   c: false,
   anim: false
 })
 
-/* JS版本 */
-const jsCode = `
-// 二分法求解方程 f(x) = x^3/2 + 2*x^2 - 8 = 0
-function bisectionMethod() {
-  let a = 0, b = 2;
-  const tolerance = 1e-6;
-  const maxIterations = 100;
+const step = ref(0)
+const a = ref(0)
+const b = ref(2)
+const c = ref(0)
 
-  console.log("迭代过程：");
-  console.log("k\\t a\\t\t f(a)\\t b\\t\t f(b)\\t c\\t\t f(c)");
-
-  for (let k = 0; k < maxIterations; k++) {
-    const fa = Math.pow(a, 3)/2 + 2*Math.pow(a, 2) - 8;
-    const fb = Math.pow(b, 3)/2 + 2*Math.pow(b, 2) - 8;
-    const c = (a + b) / 2;
-    const fc = Math.pow(c, 3)/2 + 2*Math.pow(c, 2) - 8;
-
-    console.log(k + "\\t " + a.toFixed(6) + "\\t " + fa.toFixed(6) + "\\t " + b.toFixed(6) + "\\t " + fb.toFixed(6) + "\\t " + c.toFixed(6) + "\\t " + fc.toFixed(6));
-
-    if (Math.abs(fc) < tolerance || Math.abs(b - a) < tolerance) {
-      console.log("\\n✅ 收敛！最终结果：");
-      console.log("x ≈ " + c.toFixed(8));
-      return;
-    }
-
-    if (fa * fc < 0) {
-      b = c;
-    } else {
-      a = c;
-    }
-  }
-
-  console.log("\\n❌ 达到最大迭代次数，未收敛");
+/* ================= 数学函数 ================= */
+function f(x) {
+  return Math.pow(x, 3)/2 + 2*Math.pow(x, 2) - 8
 }
-bisectionMethod();
-`
+
+/* ================= 下一步 ================= */
+function nextStep() {
+  const fa = f(a.value)
+  const mid = (a.value + b.value) / 2
+  const fc = f(mid)
+
+  c.value = mid
+
+  if (fa * fc < 0) b.value = mid
+  else a.value = mid
+
+  step.value++
+
+  // ✅ 每次点击后重新绘制图表
+  drawChart()
+}
+
+const chartCanvas = ref(null)
+
+// 绘图函数
+function drawChart() {
+  const canvas = chartCanvas.value
+  if (!canvas) return
+
+  const ctx = canvas.getContext('2d')
+  const width = canvas.width
+  const height = canvas.height
+
+  // 清空画布
+  ctx.clearRect(0, 0, width, height)
+
+  // 设置坐标系（x: [0, 2], y: [-10, 10]）
+  const xMin = 0, xMax = 2
+  const yMin = -10, yMax = 10
+
+  // 缩放因子
+  const scaleX = width / (xMax - xMin)
+  const scaleY = height / (yMax - yMin)
+
+  // 绘制坐标轴
+  ctx.beginPath()
+  ctx.strokeStyle = '#ffffff'
+  ctx.lineWidth = 1
+  
+  // X轴
+  const xAxisY = height - ((0 - yMin) / (yMax - yMin)) * height
+  ctx.moveTo(0, xAxisY)
+  ctx.lineTo(width, xAxisY)
+  
+  // Y轴
+  const yAxisX = (0 - xMin) * scaleX
+  ctx.moveTo(yAxisX, 0)
+  ctx.lineTo(yAxisX, height)
+  
+  ctx.stroke()
+  
+  // 绘制刻度标记
+  ctx.fillStyle = '#ffffff'
+  ctx.font = '10px Arial'
+  
+  // X轴刻度
+  for (let x = xMin; x <= xMax; x += 0.5) {
+    const px = (x - xMin) * scaleX
+    ctx.beginPath()
+    ctx.moveTo(px, xAxisY - 5)
+    ctx.lineTo(px, xAxisY + 5)
+    ctx.stroke()
+    
+    ctx.fillText(x.toFixed(1), px - 10, xAxisY + 15)
+  }
+  
+  // Y轴刻度
+  for (let y = yMin; y <= yMax; y += 2) {
+    const py = height - ((y - yMin) / (yMax - yMin)) * height
+    ctx.beginPath()
+    ctx.moveTo(yAxisX - 5, py)
+    ctx.lineTo(yAxisX + 5, py)
+    ctx.stroke()
+    
+    ctx.fillText(y.toFixed(0), yAxisX - 25, py + 4)
+  }
+  
+  // 绘制函数曲线 f(x) = x³/2 + 2x² - 8
+  ctx.beginPath()
+  ctx.strokeStyle = '#60a5fa'
+  ctx.lineWidth = 2
+  for (let x = xMin; x <= xMax; x += 0.01) {
+    const y = f(x)
+    const px = (x - xMin) * scaleX
+    const py = height - ((y - yMin) / (yMax - yMin)) * height
+    if (x === xMin) ctx.moveTo(px, py)
+    else ctx.lineTo(px, py)
+  }
+  ctx.stroke()
+
+  // 绘制当前区间 [a, b]
+  const ax = (a.value - xMin) * scaleX
+  const bx = (b.value - xMin) * scaleX
+  const ay = height - ((f(a.value) - yMin) / (yMax - yMin)) * height
+  const by = height - ((f(b.value) - yMin) / (yMax - yMin)) * height
+
+  ctx.beginPath()
+  ctx.strokeStyle = '#ef4444'
+  ctx.lineWidth = 3
+  ctx.moveTo(ax, 0)
+  ctx.lineTo(ax, height)
+  ctx.moveTo(bx, 0)
+  ctx.lineTo(bx, height)
+  ctx.stroke()
+
+  // 绘制中点 c
+  const cx = (c.value - xMin) * scaleX
+  ctx.beginPath()
+  ctx.fillStyle = '#10b981'
+  ctx.arc(cx, height - ((f(c.value) - yMin) / (yMax - yMin)) * height, 5, 0, Math.PI * 2)
+  ctx.fill()
+
+  // 标注 f(c)
+  const fc = f(c.value)
+  const fcy = height - ((fc - yMin) / (yMax - yMin)) * height
+  ctx.beginPath()
+  ctx.strokeStyle = '#f59e0b'
+  ctx.lineWidth = 2
+  ctx.moveTo(cx, height / 2)
+  ctx.lineTo(cx, fcy)
+  ctx.stroke()
+  
+  // 标注零点线
+  ctx.beginPath()
+  ctx.strokeStyle = '#9ca3af'
+  ctx.setLineDash([5, 3])
+  ctx.moveTo(0, xAxisY)
+  ctx.lineTo(width, xAxisY)
+  ctx.stroke()
+  ctx.setLineDash([])
+}
+
+onMounted(() => {
+  // 设置 canvas 尺寸
+  const canvas = chartCanvas.value
+  if (canvas) {
+    canvas.width = canvas.offsetWidth
+    canvas.height = canvas.offsetHeight
+    drawChart()
+  }
+})
+
+/* JS版本 */
+const jsCode = `// 二分法求方程根
+function f(x) {
+  return x*x*x/2 + 2*x*x - 8;
+}
+
+let a = 0, b = 2;
+
+while (Math.abs(b - a) > 1e-6) {
+  let c = (a + b) / 2;
+  if (f(a) * f(c) < 0) {
+    b = c;
+  } else {
+    a = c;
+  }
+  console.log(\`区间: [\${a.toFixed(4)}, \${b.toFixed(4)}]\`);
+}
+
+console.log(\`根约为: \${((a + b) / 2).toFixed(6)}\`);`
 
 /* C版本 */
 const cCode = `#include <stdio.h>
 #include <math.h>
 
 double f(double x) {
-    return pow(x, 3)/2 + 2*pow(x, 2) - 8;
+  return x*x*x/2 + 2*x*x - 8;
 }
 
 int main() {
-    double a = 0, b = 2;
-    double tolerance = 1e-6;
-    int maxIterations = 100;
+  double a = 0, b = 2;
+  double eps = 1e-6;
 
-    printf("迭代过程：\\n");
-    printf("k\\t a\\t f(a)\\t b\\t f(b)\\t c\\t f(c)\\n");
-
-    for (int k = 0; k < maxIterations; k++) {
-        double fa = f(a);
-        double fb = f(b);
-        double c = (a + b) / 2;
-        double fc = f(c);
-
-        printf("%d\\t %.6f\\t %.6f\\t %.6f\\t %.6f\\t %.6f\\t %.6f\\n", k, a, fa, b, fb, c, fc);
-
-        if (fabs(fc) < tolerance || fabs(b - a) < tolerance) {
-            printf("\\n✅ 收敛！最终结果：\\n");
-            printf("x ≈ %.8f\\n", c);
-            return 0;
-        }
-
-        if (fa * fc < 0) {
-            b = c;
-        } else {
-            a = c;
-        }
+  while (fabs(b - a) > eps) {
+    double c = (a + b) / 2;
+    if (f(a) * f(c) < 0) {
+      b = c;
+    } else {
+      a = c;
     }
+    printf("区间: [%.4f, %.4f]\\n", a, b);
+  }
 
-    printf("\\n❌ 达到最大迭代次数，未收敛\\n");
-    return 0;
+  printf("根约为: %.6f\\n", (a + b) / 2);
+  return 0;
 }`
 </script>
 
 <!-- ✨ 总结页面 -->
+<!-- ✨ 总结页面 -->
+<!-- ✨ 总结页面 -->
+<!-- ✨ 总结页面 -->
+<!-- ✨ 总结页面 -->
+
+
 ---
 layout: center
 class: 'text-center'
